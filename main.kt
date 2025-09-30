@@ -1,16 +1,31 @@
 package PrimerTrimestre.MaquinaCafe
 
 fun main() {
-    println("--- Seleccionando producto ---")
-    CoffeeMachine.selectProduct("Expresso")
+    println("Probando la máquina de café")
+    println()
 
-    println("\n--- Insertando dinero ---")
-    CoffeeMachine.insertMoney(1.0)
-    CoffeeMachine.insertMoney(1.0) // Suficiente para el café
+    // Prueba 1
+    println("1. Hacer café normal:")
+    CoffeeMachine.hacerCafe()
 
-    println("\n--- Intentando hacer café sin seleccionar ---")
-    CoffeeMachine.insertMoney(2.0) // Debe indicar que no hay producto seleccionado
+    Thread.sleep(1000) // espera entre operaciones
 
-    println("\n--- Limpiando máquina ---")
-    CoffeeMachine.clean()
+    // Prueba 2 - debería fallar
+    println("\n2. Intentar hacer otro café:")
+    CoffeeMachine.hacerCafe()
+
+    Thread.sleep(1000)
+
+    // Prueba 3 - limpiar
+    println("\n3. Limpiar máquina:")
+    CoffeeMachine.limpiarMaquina()
+
+    // Prueba 5 - error
+    println("\n5. Simular error:")
+    CoffeeMachine.reportarError()
+
+    println("\n6. Limpiar después del error:")
+    CoffeeMachine.limpiarMaquina()
+
+    println("\n--- Fin de la prueba ---")
 }
