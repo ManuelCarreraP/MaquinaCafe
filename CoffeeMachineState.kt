@@ -21,7 +21,7 @@ sealed class CoffeeMachineState : ICoffeeMachineState {
             println("Haciendo café...")
             Thread.sleep(800)
             println("Café preparado!")
-            stateMachine.cambiarEstado(ServingCoffee("Café normal")) // CORREGIDO: añadir paréntesis
+            stateMachine.cambiarEstado(ServingCoffee("Café normal"))
         }
     }
 
@@ -31,7 +31,7 @@ sealed class CoffeeMachineState : ICoffeeMachineState {
             println("Sirviendo: $tipo")
             Thread.sleep(1500)
             println("Café servido, volviendo a reposo")
-            stateMachine.cambiarEstado(Idle) // CORREGIDO: añadir paréntesis
+            stateMachine.cambiarEstado(Idle)
         }
     }
 
